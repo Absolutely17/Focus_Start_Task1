@@ -1,11 +1,12 @@
 package com.example.calculator;
 
+import java.math.BigDecimal;
+
 public class SymbolInExpression {
     private double number;
     private Character operand;
-    private String isFractional = "";
 
-    public SymbolInExpression(int value)
+    public SymbolInExpression(double value)
     {
         this.number = value;
     }
@@ -30,32 +31,6 @@ public class SymbolInExpression {
         this.operand = operand;
     }
 
-    public String getIsFractional() {
-        return isFractional;
-    }
 
-    public void setIsFractional(String isFractional) {
-        this.isFractional = isFractional;
-    }
 
-    public void addValue(int number){
-        String tempForCreateNumber;
-        if (isFractional.equals(".")) {
-
-            if (this.number % 1 == 0)
-                tempForCreateNumber = "" + (int)this.number + isFractional + number;
-            else
-                tempForCreateNumber= "" + this.number + number;
-            this.number=Double.parseDouble(tempForCreateNumber);
-        }
-        else {
-            tempForCreateNumber="" + (int)this.number + number;
-            this.number=Double.parseDouble(tempForCreateNumber);
-        }
-    }
-
-    public void enableFractional()
-    {
-        isFractional=".";
-    }
 }
