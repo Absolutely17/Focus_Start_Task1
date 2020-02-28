@@ -15,15 +15,20 @@ public class ValidateInputExpression {
         return true;
     }
 
-    public boolean CheckRPNOnErrors(List<SymbolInExpression> result, int countNumbers, int countOperations)
+    public int CheckRPNOnErrors(List<SymbolInExpression> result, int countNumbers, int countOperations)
     {
-        for(int i=0;i<result.size()-1;i++)
-            if (result.get(i).getOperand()!=null && result.get(i+1).getOperand()!=null)
-            {
-                return false;
-            }
+        int openingBracket=0;
+        int closingBracket=0;
         if (countNumbers!=countOperations+1)
-            return false;
-        return true;
+            return 2;
+        for (int i=0;i<result.size();i++) {
+                if (result.get(i).getOperand() == '(')
+                    openingBracket++;
+                else if (result.get(i).getOperand() == ')')
+                    closingBracket++;
+        }
+        if (openingBracket!=closingBracket)
+            return 1;
+        return 0;
     }
 }
