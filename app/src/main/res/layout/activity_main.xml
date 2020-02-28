@@ -10,37 +10,55 @@
         android:id="@+id/editExpression"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_weight="1"
         android:hint="Введите выражение здесь."
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="308dp"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/showText"
-        android:layout_width="117dp"
-        android:layout_height="63dp"
+        android:layout_width="169dp"
+        android:layout_height="32dp"
+        android:gravity="center"
         android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181" />
+        app:layout_constraintVertical_bias="0.198" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="170dp"
         android:layout_height="46dp"
         android:onClick="calculateExpression"
-        android:text="Button"
+        android:text="Вычислить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.398" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="69dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Ответ:"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
