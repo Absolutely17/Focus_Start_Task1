@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class SymbolInExpression {
     private double number;
-    private Character operand;
+    private char operand = ' ';
 
     public SymbolInExpression(double value)
     {
@@ -23,11 +23,11 @@ public class SymbolInExpression {
         this.number = number;
     }
 
-    public Character getOperand() {
+    public char getOperand() {
         return operand;
     }
 
-    public void setOperand(Character operand) {
+    public void setOperand(char operand) {
         this.operand = operand;
     }
 
