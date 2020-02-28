@@ -81,8 +81,8 @@ public class ReversePolishNotation {
                         priorityPrevOperation = !stack.empty() ? GetPriority(stack.peek().getOperand()) : 0;
                     }
                     stack.push(new SymbolInExpression(symbol));
+                    countOperations++;
                 }
-                countOperations++;
             }
         }
         while (!stack.empty())
@@ -93,7 +93,7 @@ public class ReversePolishNotation {
     {
         Stack<Double> answerOnExpression = new Stack<>();
         for (int i = 0; i < result.size(); i++) {
-            if (result.get(i).getOperand() == null)
+            if (result.get(i).getOperand() == ' ')
                 answerOnExpression.push(result.get(i).getNumber());
             else {
                 double resultOperand = 0;
